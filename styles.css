@@ -1,0 +1,120 @@
+/* ===== Page Background & Fonts ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Main Container ===== */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== Headings ===== */
+h1 {
+  color: #0a3d62; /* dark blue */
+  margin-top: 0;
+}
+
+h2 {
+  color: #1e3799; /* medium blue */
+  margin-bottom: 10px;
+}
+
+/* ===== Paragraphs ===== */
+p {
+  color: #333333;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ===== Disclaimer ===== */
+.disclaimer {
+  font-size: 12px;
+  color: #666666;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* ===== Input Field ===== */
+input[type="text"] {
+  padding: 10px;
+  width: calc(100% - 22px); /* account for padding */
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#addRange {
+  background-color: #1e3799; /* blue */
+  color: #ffffff;
+}
+
+#addRange:hover {
+  background-color: #273c75;
+}
+
+li button {
+  background-color: #e84118; /* red */
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+li button:hover {
+  background-color: #c23616;
+}
+
+/* ===== List ===== */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===== Eligibility Text ===== */
+.eligible {
+  color: green;
+  font-weight: bold;
+}
+
+.not-eligible {
+  color: red;
+  font-weight: bold;
+}
+
+/* ===== Flatpickr Overrides ===== */
+.flatpickr-calendar {
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.flatpickr-day.selected, 
+.flatpickr-day.startRange, 
+.flatpickr-day.endRange {
+  background: #1e3799 !important; /* blue for selected range */
+  color: #fff !important;
+}

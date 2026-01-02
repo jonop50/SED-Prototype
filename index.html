@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Seafarer's Tax Days Calculator – Prototype</title>
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Seafarer's Tax Days Calculator</h1>
+
+    <p>Select your <strong>leaving date and return date</strong>.</p>
+
+    <input
+      type="text"
+      id="dateRange"
+      placeholder="Select date range"
+      readonly
+    />
+
+    <button id="addRange">Add date range</button>
+
+    <h2>Added periods</h2>
+    <ul id="rangesList"></ul>
+
+    <h2>Summary</h2>
+    <p><strong>Total days outside the UK:</strong> <span id="totalDays">0</span></p>
+
+    <p id="eligibility"></p>
+
+    <p class="disclaimer">
+      This tool provides an indicative calculation only and does not constitute tax advice.
+    </p>
+  </div>
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
