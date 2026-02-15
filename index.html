@@ -31,6 +31,15 @@
     <h2>Summary</h2>
     <p><strong>Total days outside the UK:</strong> <span id="totalDays">0</span></p>
 
+    <h2>Email summary</h2>
+
+    <input type="text" id="senderName" placeholder="Your name">
+    <input type="email" id="senderEmail" placeholder="Your email address">
+
+    <button id="emailSummary">Email summary</button>
+
+<p id="emailStatus"></p>
+
     <p id="eligibility"></p>
 
     <p class="disclaimer">
@@ -40,6 +49,14 @@
 
   <!-- Flatpickr JS -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("unRJcSoSayZX3VqJ6");
+    })();
+  </script>
 
   <script src="script.js"></script>
 </body>

@@ -85,3 +85,34 @@ function calculateDaysOutsideUK(start, end) {
 function formatDate(date) {
   return date.toISOString().split("T")[0];
 }
+
+document.getElementById("emailSummary").addEventListener("click", () => {
+  const name = document.getElementById("senderName").value;
+  const email = document.getElementById("senderEmail").value;
+
+  if (!name || !email) {
+    alert("Please enter your name and email address.");
+    return;
+  }
+
+  let summaryText = `Seafarers’ Earnings Deduction Summary\n\n`;
+
+  ranges.forEach((range, index) => {
+    summaryText += `Period ${index + 1}: ${formatDate(range.start)} to ${formatDate(range.end)}\n`;
+  });
+
+  summaryText += `\nTotal days outside the UK: ${totalDaysEl.textContent}\n`;
+  summaryText += eligibilityEl.textContent;
+
+  emailjs.send("service_srkfi94", "template_3ixxwhl", {
+    from_name: name,
+    from_email: email,
+    summary: summaryText
+  }).then(() => {
+    document.getElementById("emailStatus").textContent =
+      "Summary sent successfully.";
+  }, () => {
+    document.getElementById("emailStatus").textContent =
+      "There was an error sending the email.";
+  });
+});
